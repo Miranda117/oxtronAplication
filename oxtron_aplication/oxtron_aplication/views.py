@@ -15,12 +15,12 @@ def calculateScopeOne(request):
     print(data)
     #print(request.text)
    
+
     allScope=ScopesCalculation()
-    allScope=ScopesCalculation()
 
 
 
-    result = allScope.callScope(scope13= data["Refrigerants"],scope2= data["Purchased Electricity"],scope3= data["Transportation"],paramsGrid= data["params"])
+    result = allScope.callScopeOne(scope1=data['Stationary Combustion'],scope12= data["Mobile Combustion"],scope13= data["Refrigerants"] )
     return JsonResponse({'result': result})
 
 
