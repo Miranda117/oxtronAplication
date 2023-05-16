@@ -40,7 +40,7 @@ def calculateRefrigerantsPurchased(request):
 
     #result = allScope.callScope(scope1=data ['Stationary Combustion'])
 
-    result = allScope.callScope(scope2= data["Purchased Electricity"],paramsGrid= data["params"])
+    result = allScope.callScopeTwo(scope2= data["Purchased Electricity"],paramsGrid= data["params"])
     return JsonResponse({'result': result})
 
 
@@ -58,6 +58,6 @@ def calculateTransportation(request):
 
     #result = allScope.callScope(scope1=data ['Stationary Combustion'])
 
-    result = allScope.callScope(scope3= data["Transportation"])
+    result = allScope.callScopeThree(scope3= data["Transportation"])
     return JsonResponse({'result': result})
 

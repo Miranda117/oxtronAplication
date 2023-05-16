@@ -77,7 +77,7 @@ import pandas as pd
 
 
 class ScopesCalculation():
-	def callScope(self,scope1=0,scope12=0,scope13=0,scope2=0,scope3=0,paramsGrid=0):
+	def callScopeOne(self,scope1=0,scope12=0,scope13=0,scope2=0,scope3=0,paramsGrid=0):
 
 		scope11=StationaryCombustion(scope1)
 		dFScope1,resumenSumary11=scope11.operaciones()
@@ -112,7 +112,7 @@ class ScopesCalculation():
 
 
 		
-	def callScope(self,scope1=0,scope12=0,scope13=0,scope2=0,scope3=0,paramsGrid=0):	
+	def callScopeTwo(self,scope1=0,scope12=0,scope13=0,scope2=0,scope3=0,paramsGrid=0):	
 		scope2=PurchasedElectricity(userSuppliedData=scope2,gridRegion=paramsGrid)
 		dFScope2,resumenSumary2=scope2.operaciones()
 
@@ -128,7 +128,7 @@ class ScopesCalculation():
 
 	
 
-	def callScope(self,scope1=0,scope12=0,scope13=0,scope2=0,scope3=0,paramsGrid=0):
+	def callScopeThree(self,scope1=0,scope12=0,scope13=0,scope2=0,scope3=0,paramsGrid=0):
     		
 
 		scope3=Transportation(scope3)
