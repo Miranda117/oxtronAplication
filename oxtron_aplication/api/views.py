@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Create your vie ws here.
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from Oxtronaplication.user import ScopesCalculation
