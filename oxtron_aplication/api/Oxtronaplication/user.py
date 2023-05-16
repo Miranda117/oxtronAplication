@@ -77,7 +77,7 @@ import pandas as pd
 
 
 class ScopesCalculation():
-	def callScopeOne(self,scope1=0,scope12=0,scope13=0,scope2=0,scope3=0,paramsGrid=0):
+	def callScopeOne(self,scope1=0,scope12=0,scope13=0):
 
 		scope11=StationaryCombustion(scope1)
 		dFScope1,resumenSumary11=scope11.operaciones()

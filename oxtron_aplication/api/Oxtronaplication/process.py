@@ -386,7 +386,7 @@ class StationaryCombustion(Scope1) :
     
 
     def resumenSumary(self, dtSocpe1):
-        resumeSumary = dtSocpe1.groupby(['Facility ID', 'Year'])['CO2e (tonnes)', "Biofuel CO2(tonnes)"].sum().reset_index()
+        resumeSumary = dtSocpe1.groupby(['Facility ID', 'Year'])[['CO2e (tonnes)', "Biofuel CO2(tonnes)"]].sum().reset_index()
         return resumeSumary
 
     
