@@ -21,9 +21,9 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('api/', views.welcome, name='welcome'),
-    path('api/', views.calculateScopeOne, name='calculateScopeOne'),
-    path('api/', views.calculateTransportation, name='calculateTransportation'),
-    path('api/', views.calculateRefrigerantsPurchased, name='calculateRefrigerantsPurchased')
+    path('api/welcome', views.welcome, name='welcome'),
+    path('api/calculateScopeOne', views.calculateScopeOne, name='calculateScopeOne'),
+    path('api/calculateTransportation', views.calculateTransportation, name='calculateTransportation'),
+    path('api/calculateRefrigerantsPurchased', views.calculateRefrigerantsPurchased, name='calculateRefrigerantsPurchased')
 
 ]
