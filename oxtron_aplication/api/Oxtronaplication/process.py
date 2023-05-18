@@ -350,7 +350,7 @@ class StationaryCombustion(Scope1) :
         dictStationaryCombustion=data.separadorDeDatos2(userSuppliedData)
     
         self.allData=dictStationaryCombustion
-        self.facilityID=dictStationaryCombustion['facilityID']
+        self.facilityID=dictStationaryCombustion['facilityId']
         self.Year=dictStationaryCombustion['year']
         self.customEmissionFactors=dictStationaryCombustion["cef"]
         self.fuel=dictStationaryCombustion['fuelType']
@@ -403,7 +403,7 @@ class MobileCombustion(Scope1) :
         dictUserSuppliedData=data.separadorDeDatos2(userSuppliedData)
         self.allData=dictUserSuppliedData
         self.Year=dictUserSuppliedData['year']
-        self.facilityID=dictUserSuppliedData["facilityID"]
+        self.facilityID=dictUserSuppliedData["facilityId"]
         self.activityType=dictUserSuppliedData['activityType']
         self.vehicleType=dictUserSuppliedData['vehicleType']
         self.activityAmount=dictUserSuppliedData['fuelAmount']
@@ -463,7 +463,7 @@ class Refrigerantes(Scope1) :
         dictUserSuppliedData                                    =data.separadorDeDatos2(userSuppliedData)
         self.allData                                            =dictUserSuppliedData
         self.Year                                               =dictUserSuppliedData["year"]
-        self.facilityID                                         =dictUserSuppliedData['facilityID']
+        self.facilityID                                         =dictUserSuppliedData['facilityId']
         self.refrigerantUsedlist                                =dictUserSuppliedData['refrigerantUsed']
         self.refrigerantInventoryBeginning                      =dictUserSuppliedData['initialAmount']      #Refrigerant inventory (in storage, not equipment) at the beginning of the Year
         self.refrigerantInventoryEnd                            =dictUserSuppliedData['finalAmount']            #	Refrigerant inventory (in storage, not equipment) at the end of the Year	
@@ -537,18 +537,18 @@ class PurchasedElectricity(scope2) :
     def __init__(self, gwp=0,gridRegion=[],userSuppliedData=[]):
         #Se debe crean variables que almacenaran listas de listas, para poder tener un mejor manejo en los data frame.
         dictUserSuppliedData=data.separadorDeDatos2(userSuppliedData)
-        self.Year                           = dictUserSuppliedData["Year"]
-        self.facilityID                     = dictUserSuppliedData['facilityID']
+        self.Year                           = dictUserSuppliedData["year"]
+        self.facilityID                     = dictUserSuppliedData['facilityId']
         self.amountElectricityConsumption   = dictUserSuppliedData['energyConsumption']
         self.units                          = dictUserSuppliedData['units']
-        self.calculationApproach            = dictUserSuppliedData['CalculationApproach']
+        self.calculationApproach            = dictUserSuppliedData['calculationApproach']
         self.typeofEmissionFactor           = dictUserSuppliedData['typeOfEmissionFactor']
         self.allData                        =dictUserSuppliedData
         #self.customEmissionFactor           = dictUserSuppliedData[6]
         dictUserSuppliedDataGris=data.separadorDeDatos2(gridRegion)
         self.GWPDataSet                     =gwp
-        self.idGrid                         =dictUserSuppliedDataGris["facilityID"]
-        self.gridRegion                     =dictUserSuppliedDataGris["Grid Region"]
+        self.idGrid                         =dictUserSuppliedDataGris["facilityId"]
+        self.gridRegion                     =dictUserSuppliedDataGris["gridRegion"]
 
 
     def operaciones(self):
