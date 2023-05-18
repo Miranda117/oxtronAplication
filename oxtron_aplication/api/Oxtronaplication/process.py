@@ -462,23 +462,22 @@ class Refrigerantes(Scope1) :
     
         dictUserSuppliedData                                    =data.separadorDeDatos2(userSuppliedData)
         self.allData                                            =dictUserSuppliedData
-        self.Year                                               =dictUserSuppliedData["Year"]
-        self.facilityID                                         =dictUserSuppliedData['Facility ID']
-        #self.activityType                                       =dictUserSuppliedData[2]
-        self.refrigerantUsedlist                                =dictUserSuppliedData['Refrigerant Used']
-        self.refrigerantInventoryBeginning                      =dictUserSuppliedData['c']      #Refrigerant inventory (in storage, not equipment) at the beginning of the Year
-        self.refrigerantInventoryEnd                            =dictUserSuppliedData['d']            #	Refrigerant inventory (in storage, not equipment) at the end of the Year	
-        self.refrigerantPurchasedFromPD                         =dictUserSuppliedData['e']
-        self.refrigerantEquipmentUsers                          =dictUserSuppliedData['f']
-        self.refrigerantAfterRecyclinReclamation                =dictUserSuppliedData['g']
-        self.refrigerantChargedIntoEquipment                    =dictUserSuppliedData['h']
-        self.refrigerantDeliveredEquipmentUsersInContainers     =dictUserSuppliedData['i']
-        self.refrigerantrRturnedRefrigerantProducers            =dictUserSuppliedData['j']
-        self.refrigerantSentRecyclingReclamation                =dictUserSuppliedData['k']
-        self.refrigerantsSentDestruction                        =dictUserSuppliedData['l']
-        self.nameplateCapacityPartiallyChargedEquipment         =dictUserSuppliedData['x']
-        self.densityPressureParticalCharge                      =dictUserSuppliedData['y']
-        self.densityPressureFullCharge                          =dictUserSuppliedData['z']
+        self.Year                                               =dictUserSuppliedData["year"]
+        self.facilityID                                         =dictUserSuppliedData['facilityID']
+        self.refrigerantUsedlist                                =dictUserSuppliedData['refrigerantUsed']
+        self.refrigerantInventoryBeginning                      =dictUserSuppliedData['initialAmount']      #Refrigerant inventory (in storage, not equipment) at the beginning of the Year
+        self.refrigerantInventoryEnd                            =dictUserSuppliedData['finalAmount']            #	Refrigerant inventory (in storage, not equipment) at the end of the Year	
+        self.refrigerantPurchasedFromPD                         =dictUserSuppliedData['purchases']
+        self.refrigerantEquipmentUsers                          =dictUserSuppliedData['returnsByUser']
+        self.refrigerantAfterRecyclinReclamation                =dictUserSuppliedData['returnsByRecycling']
+        self.refrigerantChargedIntoEquipment                    =dictUserSuppliedData['used']
+        self.refrigerantDeliveredEquipmentUsersInContainers     =dictUserSuppliedData['delivered']
+        self.refrigerantrRturnedRefrigerantProducers            =dictUserSuppliedData['returnsToProducers']
+        self.refrigerantSentRecyclingReclamation                =dictUserSuppliedData['offSiteRecycling']
+        self.refrigerantsSentDestruction                        =dictUserSuppliedData['offSiteDestruction']
+        self.nameplateCapacityPartiallyChargedEquipment         =dictUserSuppliedData['partialCapacityCharge']
+        self.densityPressureParticalCharge                      =dictUserSuppliedData['partialChargeAmount']
+        self.densityPressureFullCharge                          =dictUserSuppliedData['fullChargeAmount']
         self.GWPDataSet                                         =1
     
         
