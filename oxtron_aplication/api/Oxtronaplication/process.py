@@ -350,12 +350,12 @@ class StationaryCombustion(Scope1) :
         dictStationaryCombustion=data.separadorDeDatos2(userSuppliedData)
     
         self.allData=dictStationaryCombustion
-        self.facilityID=dictStationaryCombustion['Facility ID']
-        self.Year=dictStationaryCombustion['Year']
-        self.customEmissionFactors=dictStationaryCombustion["Custom Emission Factors"]
-        self.fuel=dictStationaryCombustion['Fuel']
-        self.amountOfFuel=dictStationaryCombustion['Amount of fuel']
-        self.Units      =dictStationaryCombustion['amount']
+        self.facilityID=dictStationaryCombustion['facilityID']
+        self.Year=dictStationaryCombustion['year']
+        self.customEmissionFactors=dictStationaryCombustion["cef"]
+        self.fuel=dictStationaryCombustion['fuelType']
+        self.amountOfFuel=dictStationaryCombustion['fuelAmount']
+        self.Units      =dictStationaryCombustion['fuelUnit']
         self.GWPDataSet =GWPDataSet
         
     def operaciones(self):
@@ -402,14 +402,12 @@ class MobileCombustion(Scope1) :
         
         dictUserSuppliedData=data.separadorDeDatos2(userSuppliedData)
         self.allData=dictUserSuppliedData
-        self.Year=dictUserSuppliedData['Year']
-        #self.description=dictUserSuppliedData[1]
-        self.facilityID=dictUserSuppliedData["Facility ID"]
-        self.activityType=dictUserSuppliedData['Activity Type']
-        #self.fuelSource=dictUserSuppliedData['Vehicle Type']
-        self.vehicleType=dictUserSuppliedData['Vehicle Type']
-        self.activityAmount=dictUserSuppliedData['Activity Amount']
-        self.unitOfFuelAmount=dictUserSuppliedData["units"]
+        self.Year=dictUserSuppliedData['year']
+        self.facilityID=dictUserSuppliedData["facilityID"]
+        self.activityType=dictUserSuppliedData['activityType']
+        self.vehicleType=dictUserSuppliedData['vehicleType']
+        self.activityAmount=dictUserSuppliedData['fuelAmount']
+        self.unitOfFuelAmount=dictUserSuppliedData["fuelUnit"]
         self.GWPDataSet=GWPDataSet
         
           
@@ -541,16 +539,16 @@ class PurchasedElectricity(scope2) :
         #Se debe crean variables que almacenaran listas de listas, para poder tener un mejor manejo en los data frame.
         dictUserSuppliedData=data.separadorDeDatos2(userSuppliedData)
         self.Year                           = dictUserSuppliedData["Year"]
-        self.facilityID                     = dictUserSuppliedData['Facility ID']
-        self.amountElectricityConsumption   = dictUserSuppliedData['Amo Elect Con']
-        self.units                          = dictUserSuppliedData['Units']
-        self.calculationApproach            = dictUserSuppliedData['Calculation Approach']
-        self.typeofEmissionFactor           = dictUserSuppliedData['Type of Emission Factor']
+        self.facilityID                     = dictUserSuppliedData['facilityID']
+        self.amountElectricityConsumption   = dictUserSuppliedData['energyConsumption']
+        self.units                          = dictUserSuppliedData['units']
+        self.calculationApproach            = dictUserSuppliedData['CalculationApproach']
+        self.typeofEmissionFactor           = dictUserSuppliedData['typeOfEmissionFactor']
         self.allData                        =dictUserSuppliedData
         #self.customEmissionFactor           = dictUserSuppliedData[6]
         dictUserSuppliedDataGris=data.separadorDeDatos2(gridRegion)
         self.GWPDataSet                     =gwp
-        self.idGrid                         =dictUserSuppliedDataGris["Facility ID"]
+        self.idGrid                         =dictUserSuppliedDataGris["facilityID"]
         self.gridRegion                     =dictUserSuppliedDataGris["Grid Region"]
 
 
@@ -596,15 +594,10 @@ class Transportation(Scope3) :
         #Se debe crean variables que almacenaran listas de listas, para poder tener un mejor manejo en los data frame.
         dictUserSuppliedData            =data.separadorDeDatos2(userSuppliedData)
         self.allData                    =dictUserSuppliedData
-        self.Year                       =dictUserSuppliedData['Year']
-        #self.description                =dictUserSuppliedData[]
-        self.category                   =dictUserSuppliedData["Category"]
-        #self.emissionFactorDataset      =dictUserSuppliedData[3]
-        #self.modeofTransport            =dictUserSuppliedData[4]
-        #self.activityType               =dictUserSuppliedData[5]
-        self.vehicleType                =dictUserSuppliedData['Vehicle Type']
-        self.amountofActivityType       =dictUserSuppliedData['Amount of Activity Type']
-        self.unitsofMeasurement         =dictUserSuppliedData['Units of Measurement']
+        self.Year                       =dictUserSuppliedData['year']
+        self.vehicleType                =dictUserSuppliedData['vehicleType']
+        self.amountofActivityType       =dictUserSuppliedData['amountOfActivityType']
+        self.unitsofMeasurement         =dictUserSuppliedData['units']
         self.GWPDataSet=params
         self.gwp                        =gwp
 
