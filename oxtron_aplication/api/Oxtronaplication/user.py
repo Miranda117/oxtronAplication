@@ -77,7 +77,7 @@ import pandas as pd
 
 
 class ScopesCalculation():
-	def callScopeOne(self,scope1=0,scope12=0,scope13=0):
+	def callScopeOneOne(self,scope1=0,scope12=0,scope13=0):
 
 		scope11=StationaryCombustion(scope1)
 		dFScope1,resumenSumary11=scope11.operaciones()
@@ -87,24 +87,43 @@ class ScopesCalculation():
 		jsScope1	 = dFScope1.to_json(orient = 'columns')
 
 		jsResumenSumary11 = resumenSumary11.to_json(orient = 'columns')
-		scope12=MobileCombustion(scope12)
-		dFScope12,resumenSumary12=scope12.operaciones()
-		jsScope12	 = dFScope12.to_json(orient = 'columns')
-		scope13=Refrigerantes(userSuppliedData=scope13)
-		dFScope13,resumenSumary13=scope13.operaciones()
-		
-		jsScope13	 = dFScope13.to_json(orient = 'columns')
 
-		jsResumenSumary13 = resumenSumary13.to_json(orient = 'columns')
 		
 
-		jsResumenSumary12 = resumenSumary12.to_json(orient = 'columns')
-
-		scopeDisct={"SCOPE1":[jsScope1,jsScope12,jsScope13]}
-		jsResume={"SCOPE1":[jsResumenSumary11,jsResumenSumary12,jsResumenSumary13]}
-		JsonResponse={"scopes":scopeDisct, "resumeSumary":jsResume}
+		scopeDisct={"SCOPE11":[jsScope1]}
+		jsResume={"SCOPE11":[jsResumenSumary11]}
+		JsonResponse={"scopes11":scopeDisct, "resumeSumary11":jsResume}
 		return JsonResponse
-	
+
+	def callScopeOneTwo(self,scope1=0,scope12=0,scope13=0):
+			scope12=MobileCombustion(scope12)
+			dFScope12,resumenSumary12=scope12.operaciones()
+			jsScope12	 = dFScope12.to_json(orient = 'columns')
+			
+			jsResumenSumary12 = resumenSumary12.to_json(orient = 'columns')
+
+			scopeDisct={"SCOPE12":[jsScope12]}
+			jsResume={"SCOPE12":[jsResumenSumary12]}
+			JsonResponse={"scope12":scopeDisct, "resumeSumary12":jsResume}
+			return JsonResponse
+
+	def callScopeOneThree(self,scope1=0,scope12=0,scope13=0):
+
+
+			scope13=Refrigerantes(userSuppliedData=scope13)
+			dFScope13,resumenSumary13=scope13.operaciones()
+			
+			jsScope13	 = dFScope13.to_json(orient = 'columns')
+
+			jsResumenSumary13 = resumenSumary13.to_json(orient = 'columns')
+			
+
+			
+
+			scopeDisct={"SCOPE13":[jsScope13]}
+			jsResume={"SCOPE13":[jsResumenSumary13]}
+			JsonResponse={"scopes13":scopeDisct, "resumeSumary13":jsResume}
+			return JsonResponse
 
 
 

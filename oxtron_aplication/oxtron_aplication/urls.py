@@ -22,7 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('api/welcome', views.welcome, name='welcome'),
-    path('api/calculateScopeOne', views.calculateScopeOne, name='calculateScopeOne'),
+    path('api/calculateScopeOneOne', views.calculateScopeOneStationary, name='calculateScopeOneOne'),
+    path('api/calculateScopeOneTwo', views.calculateScopeOneMobile, name='calculateScopeOneTwo'),
+    path('api/calculateScopeOneThree', views.calculateScopeOneRefrigerants, name='calculateScopeOneThree'),
     path('api/calculateTransportation', views.calculateTransportation, name='calculateTransportation'),
     path('api/calculateRefrigerantsPurchased', views.calculateRefrigerantsPurchased, name='calculateRefrigerantsPurchased')
 

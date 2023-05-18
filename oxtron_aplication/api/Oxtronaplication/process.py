@@ -504,7 +504,7 @@ class Refrigerantes(Scope1) :
         return dfAsignacion,resumeSumary
     
     def asignacion(self, emissionsScope13):
-        listColumns= ["Year",	"Facility ID",   		"Refrigerant Used",	"Refrigerant inventory at the beginning of the Year",	"Refrigerant inventory at the end of the Year",	"Refrigerant purchased from producers/ distributors",	"Refrigerant returned by equipment users",	"Refrigerant returned after off-site recycling or reclamation",	"Refrigerant charged into equipment",
+        listColumns= ["Year",	"Facility ID", 	"Refrigerant Used",	"Refrigerant inventory at the beginning of the Year",	"Refrigerant inventory at the end of the Year",	"Refrigerant purchased from producers/ distributors",	"Refrigerant returned by equipment users",	"Refrigerant returned after off-site recycling or reclamation",	"Refrigerant charged into equipment",
 	"Refrigerant delivered to equipment users in containers",	"Refrigerant returned to refrigerant producers",	"Refrigerant sent off-site for recycling or reclamation",	"Refrigerant sent off-site for destruction","Nameplate Capacity of Partially Charged Equipment",	"Density or Pressure of partical charge","Density or Pressure of full charge",
     "CO2-Equivalent Emissions (tonnes)",     "Z = WX/Y"]
 		
