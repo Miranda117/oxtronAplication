@@ -25,7 +25,7 @@ def calculateScopeOneStationary(request):
 
 
 
-    result = allScope.callScopeOneOne(scope1=data['stationaryCombustion'])
+    result = allScope.callScopeOneOne(scope1=data['scope'])
     return JsonResponse({'result': result})
 
 
@@ -42,7 +42,7 @@ def calculateScopeOneMobile(request):
 
 
 
-    result = allScope.callScopeOneTwo(scope12= data["mobileCombustion"])
+    result = allScope.callScopeOneTwo(scope12= data["scope"])
     return JsonResponse({'result': result})
 
 
@@ -59,7 +59,7 @@ def calculateScopeOneRefrigerants(request):
 
 
 
-    result = allScope.callScopeOneThree(scope13= data["refrigerants"])
+    result = allScope.callScopeOneThree(scope13= data["scope"])
     return JsonResponse({'result': result})
 
 
@@ -79,7 +79,7 @@ def calculateRefrigerantsPurchased(request):
 
     #result = allScope.callScope(scope1=data ['Stationary Combustion'])
 
-    result = allScope.callScope(scope2= data["purchasedElectricity"],paramsGrid= data["params"])
+    result = allScope.callScope(scope2= data["scope"],paramsGrid= data["scope"])
     return JsonResponse({'result': result})
 
 
@@ -97,6 +97,6 @@ def calculateTransportation(request):
 
     #result = allScope.callScope(scope1=data ['Stationary Combustion'])
 
-    result = allScope.callScope(scope3= data["transportation"])
+    result = allScope.callScope(scope3= data["scope"])
     return JsonResponse({'result': result})
 
