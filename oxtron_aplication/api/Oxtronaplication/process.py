@@ -543,12 +543,13 @@ class PurchasedElectricity(scope2) :
         self.units                          = dictUserSuppliedData['units']
         self.calculationApproach            = dictUserSuppliedData['calculationApproach']
         self.typeofEmissionFactor           = dictUserSuppliedData['typeOfEmissionFactor']
+        self.idGrid                         = dictUserSuppliedData['facilityId']
+        self.gridRegion                     = dictUserSuppliedData['gridRegion']
         self.allData                        =dictUserSuppliedData
         #self.customEmissionFactor           = dictUserSuppliedData[6]
         dictUserSuppliedDataGris=data.separadorDeDatos2(gridRegion)
         self.GWPDataSet                     =gwp
-        self.idGrid                         =dictUserSuppliedDataGris["facilityId"]
-        self.gridRegion                     =dictUserSuppliedDataGris["gridRegion"]
+
 
 
     def operaciones(self):
