@@ -25,7 +25,7 @@ def calculateScopeOneStationary(request):
 
 
 
-    result = allScope.callScopeOneOne(scope1=data['scope'])
+    result = allScope.callScopeOneOne(scope1=data["'scope'"])
     return JsonResponse({'result': result})
 
 
