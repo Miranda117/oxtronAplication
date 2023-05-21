@@ -122,6 +122,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = [
     'https://www.getpostman.com',
     'http://localhost:8000',
+    'http://localhost:3000',
 ]
 
 
