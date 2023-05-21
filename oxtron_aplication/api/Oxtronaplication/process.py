@@ -547,7 +547,7 @@ class PurchasedElectricity(scope2) :
         self.gridRegion                     = dictUserSuppliedData['gridRegion']
         self.allData                        =dictUserSuppliedData
         #self.customEmissionFactor           = dictUserSuppliedData[6]
-        dictUserSuppliedDataGris=data.separadorDeDatos2(gridRegion)
+        #dictUserSuppliedDataGris=data.separadorDeDatos2(gridRegion)
         self.GWPDataSet                     =gwp
 
 
