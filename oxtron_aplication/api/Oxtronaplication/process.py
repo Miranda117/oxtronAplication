@@ -572,7 +572,7 @@ class PurchasedElectricity(scope2) :
         
 
         dFScope=pd.concat([dFUser,df], axis=1,ignore_index=True)
-        listColumns= ["Year",	"Facility ID",	"Amount of Electricity Consumption",	"Units",	"Calculation Approach",	"Type of Emission Factor",	"CO2 (tonnes)",	"CH4 (tonnes)",	"N2O (tonnes)",	"CO2e (tonnes)",	"EF (kgCO2e/kWh)"]
+        listColumns= ["Year",	"Facility ID",	"Amount of Electricity Consumption",	"Units",	"Calculation Approach",	"Type of Emission Factor",	"CO2 (tonnes)",	"CH4 (tonnes)",	"N2O (tonnes)",	"CO2e (tonnes)",	"EF (kgCO2e/kWh)","grid Region"]
         dFScope.columns=listColumns
         #emisionPrint = dFScope.iloc[:, 8:-1]
         resumenSumary=self.resumenSumary(dFScope)
