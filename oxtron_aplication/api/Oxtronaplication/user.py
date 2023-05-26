@@ -92,7 +92,7 @@ class ScopesCalculation():
 
 		scopeDisct={"SCOPE11":[jsScope1]}
 		jsResume={"SCOPE11":[jsResumenSumary11]}
-		JsonResponse={"scopes11":scopeDisct, "resumeSumary11":jsResume}
+		JsonResponse={"scopes11":scopeDisct, "resultSumary":jsResume}
 		return JsonResponse
 
 	def callScopeOneTwo(self,scope1=0,scope12=0,scope13=0):
@@ -104,7 +104,7 @@ class ScopesCalculation():
 
 			scopeDisct={"SCOPE12":[jsScope12]}
 			jsResume={"SCOPE12":[jsResumenSumary12]}
-			JsonResponse={"scope12":scopeDisct, "resumeSumary12":jsResume}
+			JsonResponse={"scope12":scopeDisct, "resultSumary":jsResume}
 			return JsonResponse
 
 	def callScopeOneThree(self,scope1=0,scope12=0,scope13=0):
@@ -122,7 +122,7 @@ class ScopesCalculation():
 
 			scopeDisct={"SCOPE13":[jsScope13]}
 			jsResume={"SCOPE13":[jsResumenSumary13]}
-			JsonResponse={"scopes13":scopeDisct, "resumeSumary13":jsResume}
+			JsonResponse={"scopes13":scopeDisct, "resultSumary":jsResume}
 			return JsonResponse
 
 
@@ -141,7 +141,7 @@ class ScopesCalculation():
 		jsResumenSumary2 = resumenSumary2.to_json(orient = 'columns')
 		scopeDisct={"SCOPE2":[jsScope2]}
 		jsResume={"SCOPE2":[jsResumenSumary2]  }
-		JsonResponse={"scopes":scopeDisct, "resumeSumary":jsResume}
+		JsonResponse={"scopes":scopeDisct, "resultSumary":jsResume}
 		return JsonResponse
 	
 
@@ -159,7 +159,7 @@ class ScopesCalculation():
 		jsResumenSumary3 = resumenSumary3.to_json(orient = 'columns')
 		scopeDisct={"SCOPE3":[jsScope3]}
 		jsResume={"SCOPE3":[jsResumenSumary3] }
-		JsonResponse={"scopes":scopeDisct, "resumeSumary":jsResume}
+		JsonResponse={"scopes":scopeDisct, "resultSumary":jsResume}
 		return JsonResponse
 			
 

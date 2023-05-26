@@ -486,13 +486,7 @@ class Refrigerantes(Scope1) :
 
 
     def operaciones(self):
-        
-        #emussionFactor=efMobilCombustion().listofEf()
-        #s13=Refr()
-        
-        
-       
-        
+              
         emissionsScope13=self.iterationScope13(self.GWPDataSet, refrigerantUsedlist=self.refrigerantUsedlist,RefriReturnedequipUsers=self.refrigerantEquipmentUsers
                                                ,facilityID=self.facilityID,rib= self.refrigerantInventoryBeginning,rie=self.refrigerantInventoryEnd,e=self.refrigerantPurchasedFromPD,refrigerantReturnedAfterRecyReclamation=self.refrigerantAfterRecyclinReclamation,reChEquip=self.refrigerantChargedIntoEquipment,
                                                 reDeliveEquipUsers=self.refrigerantDeliveredEquipmentUsersInContainers,   refrigeReRefrigerant=self.refrigerantrRturnedRefrigerantProducers,k=self.refrigerantSentRecyclingReclamation,l=self.refrigerantsSentDestruction,
