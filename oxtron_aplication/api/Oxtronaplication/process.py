@@ -313,7 +313,10 @@ class Scope3():
             UnitConvert=dfConvertion.loc[:,1]==unitSM[i]
 
             newUnit=dfConvertion.loc[UnitConvert]
-            convert=float(newUnit[2])
+            try:
+                convert=float(newUnit[2])
+            except:
+                convert=0
             
             #oUnit=position.index(emissionFactor[vehicleType[i]][7])
         
