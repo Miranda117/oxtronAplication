@@ -14,8 +14,10 @@ class AnalisisCombustible():
 
 
     def analisisCombustible1(self,combustibleV=0,EF1=0,conversition=0):
-
-        emisiones = (EF1/conversition)*(combustibleV)
+        try:
+            emisiones = (EF1/conversition)*(combustibleV)
+        except:
+            emisiones=0
 #        Aquí hay una explicación de la ecuación:
         #emisiones =          Masa de CO2, CH4 o N2O que se emite
         #self.combustibleV = input asa o volumen de combustible que se quema
@@ -67,8 +69,10 @@ class CombustionMovil():
     
     
     def analisisCombustible1(self,combustibleV=0,convertion=0,EF=0):
-
-        emisiones = (EF/convertion)*(combustibleV)
+        try:
+            emisiones = (EF/convertion)*(combustibleV)
+        except: 
+             emisiones=0
 #        Aquí hay una explicación de la ecuación:
         #emisiones =          Masa de CO2, CH4 o N2O que se emite
         #self.combustibleV = input asa o volumen de combustible que se quema
@@ -253,7 +257,10 @@ class Scope2Form():
 
 
     def emission(self, emiFactor=0,amount=0,conver=0):
-        eF=(emiFactor/conver)*amount/1000
+        try:            
+            eF=(emiFactor/conver)*amount/1000
+        except:
+             eF=0
         return eF
 
     def coe2(self, listEmissions=[],aRList=[] ):
@@ -272,8 +279,10 @@ class Scope3form():
     
 
     def analisisCombustible1(self,combustibleV=0,EF1=0,conversition=0):
-
-        emisiones = (EF1/conversition)*(combustibleV)
+        try:
+            emisiones = (EF1/conversition)*(combustibleV)   
+        except:
+             emisiones=0
 #        Aquí hay una explicación de la ecuación:
         #emisiones =          Masa de CO2, CH4 o N2O que se emite
         #self.combustibleV = input asa o volumen de combustible que se quema

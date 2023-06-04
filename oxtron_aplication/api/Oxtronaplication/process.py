@@ -149,8 +149,7 @@ class Scope1():
         for i in range (len(facilityID)):
             multiplicacion=[]
             if activityType[i]==0:
-                
-        
+
                 for j in range(0,4):
                     oUnit=position.index(emissionFactor[fuel[i]][6])
                     convert=dFconvertion.iloc[oUnit,convertion[i]]
@@ -275,7 +274,7 @@ class scope2():
             elif typeEF[i]==3:
                 return 0
             
-
+            
             oUnit=position.index(emiFact[fuel[i]][7])
             
             listEmission=self.operationEmission(i,listEmission=[],convertion=convertion,originalUnit=oUnit,amountOfElectricity=amountOfElectricity,emissionFactor=emiFact,
